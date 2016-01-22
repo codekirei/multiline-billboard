@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/codekirei/multiline-billboard/issues"
   },
-  "homepage": "https://github.com/codekirei/multiline-billboard#readme"
+  "homepage": "https://github.com/codekirei/multiline-billboard#readme",
+  "dependencies": {
+    "ansi-styles": "^2.1.0",
+    "lodash.merge": "^4.0.1"
+  }
 }
