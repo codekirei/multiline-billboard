@@ -1,0 +1,8 @@
+- import logic from hari
+- add params:
+  - colors
+  - border
+- write tests
+- hook up coverage
+- write readme
+- push to npm
