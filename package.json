@@ -24,5 +24,8 @@
   "dependencies": {
     "ansi-styles": "^2.1.0",
     "lodash.merge": "^4.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.10.0"
   }
 }
