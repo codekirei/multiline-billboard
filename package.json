@@ -4,7 +4,10 @@
   "description": "turn your text into a fancy billboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cover": "nyc ava",
+    "md": "pm2 start pen",
+    "test": "ava",
+    "test-ci": "nyc --reporter=lcovonly ava"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,7 @@
     "lodash.merge": "^4.0.1"
   },
   "devDependencies": {
-    "ava": "^0.10.0"
+    "ava": "^0.10.0",
+    "nyc": "^5.3.0"
   }
 }
