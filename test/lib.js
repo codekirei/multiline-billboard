@@ -1,0 +1,70 @@
+'use strict'
+
+//----------------------------------------------------------
+// modules
+//----------------------------------------------------------
+// node
+import {EOL} from 'os'
+
+// npm
+import test from 'ava'
+import ansi from 'ansi-styles'
+
+// local
+import { longest
+       , pad
+       , bot
+       , top
+       , wrap
+       , handleStr
+       , handleStrs
+       } from '../lib'
+import defaults from '../lib/defaults'
+
+//----------------------------------------------------------
+// tests
+//----------------------------------------------------------
+const bo = ansi.blue.open
+const bc = ansi.blue.close
+const to = ansi.white.open
+const tc = ansi.white.close
+
+// longest
+//----------------------------------------------------------
+test('longest', t => t.is(longest(['one', 'two', 'three']), 5))
+
+// pad
+//----------------------------------------------------------
+test('pad: pad', t =>
+  t.is(pad(6)('test'), 'test  ')
+)
+
+test('pad: noop', t =>
+  t.is(pad(4)('test'), 'test')
+)
+
+// bot
+//----------------------------------------------------------
+test('bot', t =>
+  t.is(
+    bot(defaults.border.horizontal, defaults)
+    , `╚═══╝${bc}`
+  ))
+
+// top
+//----------------------------------------------------------
+test('top', t =>
+  t.is(
+    top(defaults.border.horizontal, defaults)
+    , `${bo}╔═══╗${EOL}`
+  )
+)
+
+// wrap
+//----------------------------------------------------------
+
+// handleStr
+//----------------------------------------------------------
+
+// handleStrs
+//----------------------------------------------------------
