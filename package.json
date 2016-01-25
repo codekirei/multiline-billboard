@@ -1,6 +1,6 @@
 {
   "name": "multiline-billboard",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "turn your text into a fancy billboard",
   "main": "index.js",
   "scripts": {
