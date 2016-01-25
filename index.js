@@ -17,7 +17,7 @@ const defaults = require('./lib/defaults')
   Build billboard from provided text.
 
   @param {String|String[]} strOrStrs - text to put in billboard
-  @param {Object} customOpts - opts to override defaults
+  @param {Object} [customOpts] - opts to override defaults
   @returns {String} billboard
  */
 function billboard(strOrStrs, customOpts) {
