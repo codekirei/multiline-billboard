@@ -58,7 +58,7 @@ billboard(strOrStrs, customOpts)
   - a string or array of strings to build the billboard around
   - an object of custom options to override the defaults (optional)
 
-See [defaults](https://github.com/codekirei/multiline-billboard/blob/master/lib/defaults.js) for the default options. Each option is overrideable. [ansi-styles](https://github.com/chalk/ansi-styles) is used to color the border and text; check its documentation for supported colors.
+See [defaults](https://github.com/codekirei/multiline-billboard/blob/master/lib/defaults.js) for the default options. Each option is overrideable. [ansi-styles](https://github.com/chalk/ansi-styles) is used to color the border and text; check its documentation for supported colors. Accepted values for `justify` are `'left'`, `'right'`, and `'center'`.
 
 ## License
 
