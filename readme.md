@@ -64,7 +64,7 @@ See [defaults](https://github.com/codekirei/multiline-billboard/blob/master/lib/
 
 [MIT](https://github.com/codekirei/multiline-billboard/blob/master/license)
 
-[1]:
-[2]:
-[3]:
-[4]:
+[1]: https://img.shields.io/travis/codekirei/multiline-billboard.svg?style=flat-square
+[2]: https://travis-ci.org/codekirei/multiline-billboard
+[3]: http://img.shields.io/coveralls/codekirei/multiline-billboard.svg?style=flat-square
+[4]: https://coveralls.io/github/codekirei/multiline-billboard?branch=master
