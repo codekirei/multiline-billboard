@@ -13,7 +13,13 @@ const defaults = require('./lib/defaults')
 //----------------------------------------------------------
 // logic
 //----------------------------------------------------------
-// doc me
+/**
+  Build billboard from provided text.
+
+  @param {String|String[]} strOrStrs - text to put in billboard
+  @param {Object} customOpts - opts to override defaults
+  @returns {String} billboard
+ */
 function billboard(strOrStrs, customOpts) {
   const opts = merge({}, defaults, customOpts)
   const mid = typeof strOrStrs === 'object'

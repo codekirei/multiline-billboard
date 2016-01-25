@@ -1,4 +1,3 @@
-- write jsdoc
 - hook up coverage
 - write readme
 - push to npm
