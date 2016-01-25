@@ -13,6 +13,7 @@ import ansi from 'ansi-styles'
 // local
 import { longest
        , pad
+       , center
        , bot
        , top
        , wrap
@@ -35,13 +36,29 @@ test('longest', t => t.is(longest(['one', 'two', 'three']), 5))
 
 // pad
 //----------------------------------------------------------
-test('pad: pad', t =>
-  t.is(pad(6)('test'), 'test  ')
+test('pad: left', t =>
+  t.is(pad(6, 'left')('test'), 'test  ')
+)
+
+test('pad: right', t =>
+  t.is(pad(6, 'right')('test'), '  test')
+)
+
+test('pad: center', t =>
+  t.is(pad(6, 'center')('test'), center('test', 2))
 )
 
 test('pad: noop', t =>
   t.is(pad(4)('test'), 'test')
 )
+
+// center
+//----------------------------------------------------------
+test('center: even diff', t =>
+  t.is(center('test', 4), '  test  '))
+
+test('center: odd diff', t =>
+  t.is(center('test', 5), '  test   '))
 
 // bot
 //----------------------------------------------------------
@@ -82,9 +99,9 @@ test('handleStrs', t => {
     , 'For forgetting my homework'
     , 'Mogami River']
   const text =
-    [ `║${bc} ${to}Standing in hallway       ${tc} ${bo}║${EOL}`
+    [ `║${bc} ${to}   Standing in hallway    ${tc} ${bo}║${EOL}`
     , `║${bc} ${to}For forgetting my homework${tc} ${bo}║${EOL}`
-    , `║${bc} ${to}Mogami River              ${tc} ${bo}║${EOL}`
+    , `║${bc} ${to}       Mogami River       ${tc} ${bo}║${EOL}`
     ].join('')
   const expected = { len: strs[1].length, text }
   t.same(handleStrs(strs, defaults), expected)

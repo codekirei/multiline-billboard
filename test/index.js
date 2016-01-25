@@ -31,9 +31,9 @@ test('strs', t => {
   const fill = '═'.repeat(strs[1].length)
   const expected =
     [ `${bo}╔═${fill}═╗`
-    , `║${bc} ${to}Standing in hallway       ${tc} ${bo}║`
+    , `║${bc} ${to}   Standing in hallway    ${tc} ${bo}║`
     , `║${bc} ${to}For forgetting my homework${tc} ${bo}║`
-    , `║${bc} ${to}Mogami River              ${tc} ${bo}║`
+    , `║${bc} ${to}       Mogami River       ${tc} ${bo}║`
     , `╚═${fill}═╝${bc}`
     ]
   out.split(EOL).map((str, i) => t.is(str, expected[i]))
