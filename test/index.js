@@ -25,7 +25,8 @@ test('strs', t => {
   const strs =
     [ 'Standing in hallway'
     , 'For forgetting my homework'
-    , 'Mogami River']
+    , 'Mogami River'
+    ]
   const out = billboard(strs)
   const fill = '═'.repeat(strs[1].length)
   const expected =
