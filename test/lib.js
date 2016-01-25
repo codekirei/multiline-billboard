@@ -62,9 +62,30 @@ test('top', t =>
 
 // wrap
 //----------------------------------------------------------
+test('wrap', t =>
+  t.is(wrap(defaults)('test')
+  , `║${bc} ${to}test${tc} ${bo}║${EOL}`
+  ))
 
 // handleStr
 //----------------------------------------------------------
+test('handleStr', t =>
+  t.same(handleStr('test', defaults)
+  , {len: 4, text: wrap(defaults)('test')})
+)
 
 // handleStrs
 //----------------------------------------------------------
+test('handleStrs', t => {
+  const strs =
+    [ 'Standing in hallway'
+    , 'For forgetting my homework'
+    , 'Mogami River']
+  const text =
+    [ `║${bc} ${to}Standing in hallway       ${tc} ${bo}║${EOL}`
+    , `║${bc} ${to}For forgetting my homework${tc} ${bo}║${EOL}`
+    , `║${bc} ${to}Mogami River              ${tc} ${bo}║${EOL}`
+    ].join('')
+  const expected = { len: strs[1].length, text }
+  t.same(handleStrs(strs, defaults), expected)
+})
