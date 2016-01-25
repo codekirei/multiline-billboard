@@ -1,5 +1,4 @@
 - hook up coverage
-- write readme
 - push to npm
 
 later:
