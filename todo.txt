@@ -1,4 +1,3 @@
-- write tests for custom opts
 - write jsdoc
 - hook up coverage
 - write readme

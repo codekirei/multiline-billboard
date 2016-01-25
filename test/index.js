@@ -39,13 +39,35 @@ test('strs', t => {
 })
 
 test('str', t => {
-  const str = 'This is not a test.'
-  const out = billboard(str)
-  const fill = '═'.repeat(str.length)
+  const testStr = 'This is not a test.'
+  const out = billboard(testStr)
+  const fill = '═'.repeat(testStr.length)
   const expected =
     [ `${bo}╔═${fill}═╗`
-    , `║${bc} ${to}${str}${tc} ${bo}║`
+    , `║${bc} ${to}${testStr}${tc} ${bo}║`
     , `╚═${fill}═╝${bc}`
+    ]
+  out.split(EOL).map((str, i) => t.is(str, expected[i]))
+})
+
+test('custom opts', t => {
+  const opts =
+    { colors:
+      { text: 'red' }
+    , border:
+      { ul: '/'
+      , ur: '\\'
+      , ll: '\\'
+      , lr: '/'
+      }
+    }
+  const testStr = 'This is not a test.'
+  const out = billboard(testStr, opts)
+  const fill = '═'.repeat(testStr.length)
+  const expected =
+    [ `${bo}/═${fill}═\\`
+    , `║${bc} ${ansi.red.open}${testStr}${ansi.red.close} ${bo}║`
+    , `\\═${fill}═/${bc}`
     ]
   out.split(EOL).map((str, i) => t.is(str, expected[i]))
 })
