@@ -10,7 +10,7 @@
 
 ## About
 
-A Node.js module to format a string or array of strings into a billboard. Useful for displaying text in a CLI application. Configurable colors and border characters with sane defaults.
+A Node.js module to format a string or array of strings into a billboard. Useful for displaying text in a CLI application. Configurable colors, border characters, and justification with sane defaults.
 
 **Turn this:**
 
