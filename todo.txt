@@ -1,5 +1,2 @@
-- hook up coverage
-- push to npm
-
 later:
   - center / right justification
