@@ -48,6 +48,10 @@ test('pad: center', t =>
   t.is(pad(6, 'center')('test'), center('test', 2))
 )
 
+test('pad: error', t =>
+  t.throws(() => pad(6, 'cneter')('test'))
+)
+
 test('pad: noop', t =>
   t.is(pad(4)('test'), 'test')
 )
